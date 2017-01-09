@@ -3,8 +3,10 @@
 <head>
 <meta charset="ISO-8859-1">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Home</title>
+<title>Estimate</title>
 <link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css">
+<link rel="stylesheet" href="css/theme-classic.css" />
+<link rel="stylesheet" href="css/invoiceAppGui.css" />
 <script src="js/jquery.min.js"></script>
 <script src="js/jquery.mobile-1.4.5.min.js"></script>
 <script>
@@ -17,30 +19,24 @@ $(document).on("pagecontainerloadfailed",function(event,data){
 </script>
 </head>
 <body>
-  <div data-role="page" id="homePage">
+  <div data-role="page" id="homePage" data-theme="b">
 	<div data-role="header" data-position="fixed">
-		<h1>Invoice App</h1>
-	</div><!-- /header -->
-	<div data-role="main" class="ui-content">
-		<form method="post" action="">
-			<label for="fname">User Name</label>
-         	<input type="text" name="userName">
-         	<label for="password">Password</label>
-         	<input type="password" name="password" autocomplete="off">
-         	<label for="company">Company</label>
-         	<input type="text" name="company">
-		</form>
-	</div><!-- /content -->
-
-	<div data-role="footer" data-position="fixed">
-		 <div data-role="navbar" data-iconpos="bottom">
+		<div data-role="navbar" data-iconpos="bottom">
 			<ul>
 				<li><a href="home.html" class="ui-btn-active ui-state-persist" data-icon="bullets" data-transition="slide">Estimate</a></li>
 				<li><a href="invoice.html" data-icon="mail" data-transition="none">Invoice</a></li>
 				<li><a href="clients.html" data-icon="user" data-transition="none">Clients</a></li>
 				<li><a href="settings.html" data-icon="gear" data-transition="none">Settings</a></li>
 			</ul>
-		</div><!-- /navbar -->
+		</div>
+	</div><!-- /header -->
+	<div data-role="main" class="ui-content">
+		<header>Estimate Page...</header>
+	</div><!-- /content -->
+
+	<div data-role="footer" data-position="fixed">
+		 <a href="#popup" data-rel="popup" data-transition="none" class="ui-btn fab">+</a>
+		 <!-- /navbar -->
 	</div><!-- /footer -->
 </div><!-- /page -->
 </body>
