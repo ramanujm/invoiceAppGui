@@ -5,10 +5,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Register</title>
 <link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css">
-<link rel="stylesheet" href="css/theme-classic.css" />
+<link rel="stylesheet" href="http://demos.jquerymobile.com/1.4.0/theme-classic/theme-classic.css" />
 <script src="js/jquery.min.js"></script>
-<script src="js/jquery-ui.min.js"></script>
 <script src="js/jquery.mobile-1.4.5.min.js"></script>
+<script src="js/appservice.js"></script>
 
 <script>
 $(document).on("pagecontainerload",function(event,data){
@@ -17,6 +17,7 @@ $(document).on("pagecontainerload",function(event,data){
 $(document).on("pagecontainerloadfailed",function(event,data){
   //alert("Sorry, requested page does not exist.");
 });
+
 </script>
 </head>
 <body>
@@ -26,20 +27,21 @@ $(document).on("pagecontainerloadfailed",function(event,data){
 		<h1>Register</h1>
 	</div><!-- /header -->
 	<div data-role="main" class="ui-content">
-		<form method="post" action="">
 			<label for="fname">User Name</label>
          	<input type="text" name="userName">
          	<label for="password">Password</label>
          	<input type="password" name="password" autocomplete="off">
          	<label for="company">Industry</label>
-         	<input type="text" name="company">
-		</form>
-		<a href="home.html" data-role="button">Register</a>
-		<!-- <a href="addNewClients.html" data-role="button" data-icon="plus" data-iconpos="notext"></a> -->
-	</div><!-- /content -->
-
-	<div data-role="footer" data-position="fixed" data-theme="b">
-	</div><!-- /footer -->
-</div><!-- /page -->
+  <div class="ui-field-contain">
+    <select name="select-native-1" id="select-native-1">
+        <option value="1">Electrical</option>
+        <option value="2">Contracting</option>
+        <option value="3">Plumbing</option>
+        <option value="4">Mechanical</option>
+    </select>
+  </div>		
+		<a  onclick="register();" href="#" data-role="button">Register</a>		
+</div>
+</div>
 </body>
 </html>
