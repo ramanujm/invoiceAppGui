@@ -5,8 +5,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Register</title>
 <link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css">
-<link rel="stylesheet" href="http://demos.jquerymobile.com/1.4.0/theme-classic/theme-classic.css" />
+<link rel="stylesheet" href="css/theme-classic.css" />
 <script src="js/jquery.min.js"></script>
+<script src="js/jquery-ui.min.js"></script>
 <script src="js/jquery.mobile-1.4.5.min.js"></script>
 
 <script>
@@ -16,31 +17,6 @@ $(document).on("pagecontainerload",function(event,data){
 $(document).on("pagecontainerloadfailed",function(event,data){
   //alert("Sorry, requested page does not exist.");
 });
-
-function register() {
-	//alert('hi');
-	  jQuery.ajax ({
-	    url: "http://homechichester.chickenkiller.com:59091/register",
-       // url : "http://192.168.0.12:9091/register",
-        //url : "http://192.168.0.22:9091/register",	    
-	    type: "POST",
-	    data: JSON.stringify({ username: "John", password: "test" , industry : "wiring" }),
-	    dataType: "json",
-	    contentType: "application/json; charset=utf-8",
-	    success: function(data){
-		    if (data.result == 'Success')
-	    	     $.mobile.changePage( "home.html", { transition: "slideup", changeHash: false });
-		    else{
-                 //show the alerts or error message;;
-			    }
-			    		    
-	      //  alert(data.result);
-	       // alert(data.code);
-	    },
-	    error : function(error) {
-		}
-	});	
-}
 </script>
 </head>
 <body>
@@ -50,20 +26,20 @@ function register() {
 		<h1>Register</h1>
 	</div><!-- /header -->
 	<div data-role="main" class="ui-content">
+		<form method="post" action="">
 			<label for="fname">User Name</label>
          	<input type="text" name="userName">
          	<label for="password">Password</label>
          	<input type="password" name="password" autocomplete="off">
          	<label for="company">Industry</label>
-  <div class="ui-field-contain">
-    <select name="select-native-1" id="select-native-1">
-        <option value="1">Electrical</option>
-        <option value="2">Contracting</option>
-        <option value="3">Plumbing</option>
-        <option value="4">Mechanical</option>
-    </select>
-  </div>		
-		<a  onclick="register();" href="#" data-role="button">Register</a>		
-</div>
+         	<input type="text" name="company">
+		</form>
+		<a href="home.html" data-role="button">Register</a>
+		<!-- <a href="addNewClients.html" data-role="button" data-icon="plus" data-iconpos="notext"></a> -->
+	</div><!-- /content -->
+
+	<div data-role="footer" data-position="fixed" data-theme="b">
+	</div><!-- /footer -->
+</div><!-- /page -->
 </body>
 </html>
