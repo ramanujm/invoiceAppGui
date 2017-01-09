@@ -4,7 +4,7 @@
 
 var serviceURL = "http://homechichester.chickenkiller.com:59091/register";
 
-function register() {
+function registerb() {
 	  jQuery.ajax ({
 	   url: serviceURL,
 	    //url: "http://localhost:9091/register",
@@ -25,4 +25,44 @@ function register() {
 	    error : function(error) {
 		}
 	});	
+}
+function estimate() {
+	   $.mobile.changePage("home.html", { transition: "slideup", changeHash: false });
+}
+function clients() {
+	   $.mobile.changePage("clients.html", { transition: "slideup", changeHash: false });
+}
+function invoice() {
+	   $.mobile.changePage("invoice.html", { transition: "slideup", changeHash: false });
+}
+function settings() {
+	   $.mobile.changePage("settings.html", { transition: "slideup", changeHash: false });
+}
+
+function register() {
+	   $.mobile.changePage("home.html", { transition: "slideup", changeHash: false });
+}
+
+function myAccountPage() {
+	   $.mobile.changePage("accountSettings.html", { transition: "slideup", changeHash: false });
+}
+
+function myCompanyPage() {
+	   $.mobile.changePage("companySettings.html", { transition: "slideup", changeHash: false });
+}
+
+function preferncePage() {
+	   $.mobile.changePage("preferenceSettings.html", { transition: "slideup", changeHash: false });
+}
+
+function docSettingsPage() {
+	   $.mobile.changePage("docSettings.html", { transition: "slideup", changeHash: false });
+}
+
+function itemsPage() {
+	   $.mobile.changePage("itemSettings.html", { transition: "slideup", changeHash: false });
+}
+
+function helpPage() {
+	   $.mobile.changePage("helpPage.html", { transition: "slideup", changeHash: false });
 }

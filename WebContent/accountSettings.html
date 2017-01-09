@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Account Settings</title>
+<link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css">
+<link rel="stylesheet" href="css/theme-classic.css" />
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery.mobile-1.4.5.min.js"></script>
+<script src="js/appservice.js"></script>
+</head>
+<body>
+<div data-role="page" id="myAccountSettings" data-theme="b">
+
+	<div data-role="header" data-position="fixed" data-theme="b">
+		<a onclick="settings()" href="" data-icon="back"></a>
+		<h1>My Account</h1>
+		<a onclick="SaveUpdateAccountSettings()" href="" data-icon="check">Save</a>
+	</div><!-- /header -->
+	<div data-role="main" class="ui-content">
+		<label for="firstname">First Name</label>
+       	<input type="text" name="firstname">
+       	<label for="lastname">Last Name</label>
+       	<input type="text" name="lastname">
+       	<label for="email">Email</label>
+       	<input type="text" name="email">
+         	
+	  <div class="ui-field-contain">
+	    <select name="select-native-1" id="select-native-1">
+	        <option value="1">Electrical</option>
+	        <option value="2">Contracting</option>
+	        <option value="3">Plumbing</option>
+	        <option value="4">Mechanical</option>
+	    </select>
+	  </div>		
+	</div>
+</div>
+</body>
+</html>
