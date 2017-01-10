@@ -2,9 +2,9 @@
  * This file contains applications common variable and pages get/post methods.
  */
 
-var serviceURL = "http://homechichester.chickenkiller.com:59091/register";
+var serviceURL = "http://ec2-35-160-18-61.us-west-2.compute.amazonaws.com:8080/invoiceapp/register";
 
-function registerb() {
+function registerB() {
 	  jQuery.ajax ({
 	   url: serviceURL,
 	    //url: "http://localhost:9091/register",

@@ -2,45 +2,48 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 <title>Register</title>
+
+<link rel="stylesheet" href="css/font-awesome.min.css" />
 <link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css">
-<link rel="stylesheet" href="css/theme-classic.css" />
+<link rel="stylesheet" href="vendor/waves/waves.min.css" />
+<link rel="stylesheet" href="vendor/wow/animate.css" />
+<link rel="stylesheet" href="css/nativedroid2.css" />
+
 <script src="js/jquery.min.js"></script>
+<script src="js/jquery-ui.min.js"></script>
 <script src="js/jquery.mobile-1.4.5.min.js"></script>
+<script src="vendor/waves/waves.min.js"></script>
+<script src="vendor/wow/wow.min.js"></script>
+<script src="js/nativedroid2.js"></script>
 <script src="js/appservice.js"></script>
-
-<script>
-$(document).on("pagecontainerload",function(event,data){
-  //alert("pagecontainerload event fired!\nURL: " + data.url);
-});
-$(document).on("pagecontainerloadfailed",function(event,data){
-  //alert("Sorry, requested page does not exist.");
-});
-
-</script>
+<script src="nd2settings.js"></script>
+	<style>
+		/* Prevent FOUC */
+		body { opacity: 0; }
+	</style>
 </head>
 <body>
-  <div data-role="page" id="registerPage" data-theme="b" data-overlay-theme="a">
-
-	<div data-role="header" data-position="fixed" data-theme="b">
+  <div data-role="page" id="registerPage" class="nd2-no-menu-swipe">
+  
+	<div data-role="header" data-position="fixed">
 		<h1>Register</h1>
 	</div><!-- /header -->
-	<div data-role="main" class="ui-content">
-			<label for="fname">User Name</label>
-         	<input type="text" name="userName">
-         	<label for="password">Password</label>
-         	<input type="password" name="password" autocomplete="off">
-         	<label for="company">Industry</label>
-  <div class="ui-field-contain">
-    <select name="select-native-1" id="select-native-1">
-        <option value="1">Electrical</option>
-        <option value="2">Contracting</option>
-        <option value="3">Plumbing</option>
-        <option value="4">Mechanical</option>
-    </select>
-  </div>		
-		<a  onclick="register();" href="#" data-role="button">Register</a>		
+	<!-- <div data-role="main" class="ui-content"> -->
+	<div role="main" class="ui-content wow fadeIn" data-inset="false" data-wow-delay="0.2s">
+         	<input type="text" name="userName" id="userName" placeholder="User Name">
+         	<input type="password" name="password" autocomplete="off" placeholder="Password">
+			  <div class="ui-field-contain">
+			  <label for="company" class="select">Industry</label>
+			    <select name="select-native-1" id="select-native-1" data-native-menu="false">
+			        <option value="1">Electrical</option>
+			        <option value="2">Contracting</option>
+			        <option value="3">Plumbing</option>
+			        <option value="4">Mechanical</option>
+			    </select>
+			  </div>
+		<a  onclick="register();" href="#" class="ui-btn"><i class="zmdi zmdi-mail-send"></i>Register</a>		
 </div>
 </div>
 </body>
