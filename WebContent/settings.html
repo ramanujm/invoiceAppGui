@@ -2,16 +2,30 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 <title>Settings</title>
+
+<link rel="stylesheet" href="css/font-awesome.min.css" />
 <link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css">
-<link rel="stylesheet" href="css/theme-classic.css" />
-<link rel="stylesheet" href="css/invoiceAppGui.css">
+<link rel="stylesheet" href="vendor/waves/waves.min.css" />
+<link rel="stylesheet" href="vendor/wow/animate.css" />
+<link rel="stylesheet" href="css/nativedroid2.css" />
+
 <script src="js/jquery.min.js"></script>
+<script src="js/jquery-ui.min.js"></script>
 <script src="js/jquery.mobile-1.4.5.min.js"></script>
+<script src="vendor/waves/waves.min.js"></script>
+<script src="vendor/wow/wow.min.js"></script>
+<script src="js/nativedroid2.js"></script>
+<script src="js/appservice.js"></script>
+<script src="nd2settings.js"></script>
+	<style>
+		/* Prevent FOUC */
+		body { opacity: 0; }
+	</style>
 </head>
 <body>
-  <div data-role="page" id="settingsPage" data-theme="b" data-overlay-theme="a">
+  <div data-role="page" id="settingsPage" class="nd2-no-menu-swipe">
 
 	<div data-role="header" data-position="fixed">
 		<div data-role="navbar" data-iconpos="bottom">
